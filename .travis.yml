@@ -20,4 +20,4 @@ jobs:
     - stage: Deploy
       name: Deploy
       script:
-        -echo "deploy"
+        - echo "deploy"
