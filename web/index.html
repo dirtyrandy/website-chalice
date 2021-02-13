@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Caleb Cook</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ cloudfront_url }}/web/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="web/assets/css/noscript.css" /></noscript>
+		<script src="//www.google.com/recaptcha/api.js" async defer></script>
+	</head>
+	<body class="is-preload">
+		{% if custom_message %}
+			{{ custom_message }}
+		{% endif %}
+
+		{% if user %}
+			<p align="center">Welcome {{ user }}!</p>
+		{% endif %}
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						<a href="https://github.com/dirtyrandy" class="fab fa-github-square" target="_blank"><span>Github</span></a>
+						<a href="https://www.linkedin.com/in/calebbcook/" class="fab fa-linkedin" target="_blank"><span>LinkedIn</span></a>
+						<a href="{{ login_url }}" class="fas fa-sign-in-alt"><span>Login</span></a>
+						<a href="{{ logout_url }}" class="fas fa-sign-out-alt"><span>Logout</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1><b>Caleb Cook</b></h1>
+									<p>Identity Security Engineer</p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="{{ cloudfront_url }}/web/images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Work Experience</h2>
+								</header>
+								<p>
+									Identity security professional that's also a full stack python developer.
+								</p>
+								<section>
+									<h3><b>Product Experience</b></h3>
+										<div class="list" align="left">
+											PingFederate, PingOne/PingID, Azure/AAD, Amazon Web Services, Radiant Logic ICS/FID, Savyint, Splunk, Jira
+										</div>
+									<br>
+									<h3><b>Technologies</b></h3>
+										<div class="list" align="left">
+											SAML 2.0, OAuth2, OIDC, AWS, AAD, Zappa/Serverless, GIT, CICD
+										</div>
+								</section>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="{{ email_me_url }}" method="post" enctype="application/x-www-form-urlencoded">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="g-recaptcha" data-sitekey="6LfdxQETAAAAAC_aJjUQgz8PX11QJ5ssEw6EPKWw" data-size="compact" data-callback="recaptcha_callback"></div>
+											<div class="col-12">
+												<input id="submit" type="submit" value="Send Message" disabled="disabled" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; All rights reserved. 2021</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ cloudfront_url }}/web/assets/js/jquery.min.js"></script>
+			<script src="{{ cloudfront_url }}/web/assets/js/browser.min.js"></script>
+			<script src="{{ cloudfront_url }}/web/assets/js/breakpoints.min.js"></script>
+			<script src="{{ cloudfront_url }}/web/assets/js/util.js"></script>
+			<script src="{{ cloudfront_url }}/web/assets/js/main.js"></script>
+
+	</body>
+</html>

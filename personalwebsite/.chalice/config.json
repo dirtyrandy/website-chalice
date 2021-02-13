@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "app_name": "personalwebsite",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "dev",
+      "api_gateway_custom_domain": {
+        "domain_name": "dev.seecook.info",
+        "certificate_arn": "arn:aws:acm:us-east-1:644965670892:certificate/d8d5f491-0dd9-4081-8e0f-d53c7303d874"
+      }
+    },
+    "prod": {
+      "api_gateway_stage": "prod",
+      "api_gateway_custom_domain": {
+        "domain_name": "seecook.info",
+        "certificate_arn": "arn:aws:acm:us-east-1:644965670892:certificate/c540b86b-fc39-4ff2-96d2-a6aa2ca1c0fb"
+      }
+    }
+  }
+}
